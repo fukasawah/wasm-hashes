@@ -1,0 +1,64 @@
+{
+  "name": "@fukasawah/wasm-hashes",
+  "version": "1.0.0",
+  "description": "My webpack project",
+  "type": "module",
+  "license": "MIT",
+  "author": "fukasawah",
+  "source": "./src/*.*",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "exports": {
+    "./md5": {
+			"browser": "./src/md5.js",
+			"umd": "./src/md5.js",
+			"import": "./src/md5.js",
+      "require": "./src/md5.js",
+      "types": "./src/md5.d.ts"
+    },
+    "./sha1": {
+			"browser": "./src/sha1.js",
+			"umd": "./src/sha1.js",
+			"import": "./src/sha1.js",
+      "require": "./src/sha1.js",
+      "types": "./src/sha1.d.ts"
+    },
+    "./sha256": {
+			"browser": "./src/sha256.js",
+			"umd": "./src/sha256.js",
+			"import": "./src/sha256.js",
+      "require": "./src/sha256.js",
+      "types": "./src/sha256.d.ts"
+    },
+    "./sha512": {
+			"browser": "./src/sha512.js",
+			"umd": "./src/sha512.js",
+			"import": "./src/sha512.js",
+      "require": "./src/sha512.js",
+      "types": "./src/sha512.d.ts"
+    }
+  },
+  "keywords": [
+    "hash",
+    "md5",
+    "sha1",
+    "sha256",
+    "sha512",
+    "wasm",
+    "crypto"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fukasawah/wasm-hashes"
+  },
+  "scripts": {
+    
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@rollup/plugin-wasm": "^6.2.2",
+    "microbundle": "^0.15.1"
+  }
+}
